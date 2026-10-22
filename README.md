@@ -22,4 +22,3 @@ You can download the latest Windows installer from the Releases section.
 
 The source code is not published.
 
-Translated with DeepL.com (free version)
