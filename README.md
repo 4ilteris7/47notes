@@ -1,4 +1,4 @@
-# Notes
+# 47Notes
 
 A locally running desktop app for Windows that includes notes, tasks, a calendar, and diagrams.
 
