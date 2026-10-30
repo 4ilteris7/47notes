@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self';" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#08090b" />
+  <title>Notes</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="desktop-body">
+  <main class="desktop-shell">
+    <section class="app-frame desktop-app" aria-label="Notes masaüstü uygulaması">
+      <div class="window-bar">
+        <div class="brand-lockup">
+          <span class="brand-mark">47</span>
+          <span>NOTES</span>
+        </div>
+        <label class="global-search" role="search">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg>
+          <input id="global-search-input" type="search" placeholder="Notlarda ara…" autocomplete="off" />
+        </label>
+        <div class="top-date" id="top-date" aria-label="Bugünün tarihi">
+          <button class="top-clock" id="top-clock" aria-label="Saat ve alarmlar" title="Alarm ekle"><time id="live-clock"></time><small>ALARM EKLE</small></button>
+          <strong id="top-date-day"></strong>
+          <span><b id="top-date-month"></b><small id="top-date-weekday"></small></span>
+        </div>
+      </div>
+
+      <div class="app-body">
+        <aside class="context-sidebar">
+          <div class="sidebar-head">
+            <div><span class="overline">ÇALIŞMA ALANI</span><strong>Yerel defter</strong></div>
+          </div>
+          <nav class="sidebar-nav" id="workspace-nav" aria-label="Çalışma alanı görünümleri"></nav>
+          <div class="sidebar-section folder-section">
+            <div class="section-label"><span>KATEGORİLER</span><button id="add-folder-button" aria-label="Yeni kategori">+</button></div>
+            <div class="folder-list" id="folder-list"></div>
+          </div>
+          <div class="sidebar-section recent-section">
+            <div class="section-label"><span>SON NOTLAR</span></div>
+            <div class="recent-list" id="recent-list"></div>
+          </div>
+          <div class="sidebar-local-actions">
+            <button id="export-button" aria-label="Yedek dışa aktar">
+              <svg viewBox="0 0 24 24"><path d="M12 3v12M7 10l5 5 5-5M5 20h14"/></svg>
+              <span>Yedek oluştur</span>
+            </button>
+            <button id="import-button" aria-label="Yedek içe aktar">
+              <svg viewBox="0 0 24 24"><path d="M12 15V3M7 8l5-5 5 5M5 20h14"/></svg>
+              <span>Yedek yükle</span>
+            </button>
+            <button class="sidebar-trash-button" id="trash-button" aria-label="Çöp kutusu">
+              <svg viewBox="0 0 24 24"><path d="M4 7h16M9 7V4h6v3M7 7l1 13h8l1-13M10 11v5M14 11v5"/></svg>
+              <span>Çöp kutusu</span><small>0</small>
+            </button>
+          </div>
+        </aside>
+
+        <section class="workspace" id="workspace" aria-live="polite"></section>
+      </div>
+    </section>
+  </main>
+
+  <dialog class="confirm-dialog" id="confirm-dialog">
+    <form method="dialog" class="confirm-card">
+      <span class="confirm-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 7h16M9 7V4h6v3M7 7l1 13h8l1-13M10 11v5M14 11v5"/></svg></span>
+      <div class="confirm-copy"><span class="overline" id="confirm-kicker">SİLME ONAYI</span><h2 id="confirm-title">Kaydı sil</h2><p id="confirm-message"></p></div>
+      <div class="confirm-actions"><button value="cancel" class="confirm-cancel">Vazgeç</button><button value="confirm" class="confirm-accept" id="confirm-accept">Sil</button></div>
+    </form>
+  </dialog>
+  <dialog class="alarm-dialog" id="alarm-dialog" aria-labelledby="alarm-dialog-title">
+    <form id="alarm-form" class="alarm-card">
+      <span class="overline">SAAT VE TAKVİM</span>
+      <h2 id="alarm-dialog-title">Alarm ekle</h2>
+      <label>Başlık<input name="title" maxlength="200" placeholder="Neyi hatırlatalım?" required /></label>
+      <div class="alarm-date-fields"><label>Tarih<input name="date" type="date" required /></label><label>Saat<input name="time" type="time" required /></label></div>
+      <p class="alarm-help">Pencereyi kapatsanız da alarmlar sistem tepsisinde çalışır. Bilgisayar uyurken geçen alarmlar, uyandığında bildirilir.</p>
+      <p id="alarm-form-error" class="alarm-form-error" role="alert"></p>
+      <div class="alarm-dialog-actions"><button type="button" id="alarm-remove" hidden>Alarmı kaldır</button><button type="button" id="alarm-cancel">Vazgeç</button><button type="submit" class="solid-button">Kaydet</button></div>
+    </form>
+  </dialog>
+  <section id="alarm-alerts" class="alarm-alerts" aria-label="Çalan alarmlar" aria-live="assertive"></section>
+  <div class="toast" id="toast" role="status"></div>
+  <script src="app.js"></script>
+</body>
+</html>

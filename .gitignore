@@ -1,0 +1,10 @@
+node_modules/
+release/
+*.log
+.qa-*/
+.local-updates/
+notes-data.json
+alarm-history.json
+.env
+.env.*
+sites/

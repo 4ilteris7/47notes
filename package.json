@@ -1,0 +1,62 @@
+{
+  "name": "notes-desktop",
+  "productName": "Notes",
+  "version": "1.5.3",
+  "description": "Yerel öncelikli kişisel not, görev, takvim ve şema masaüstü uygulaması.",
+  "main": "electron/main.cjs",
+  "author": "Notes",
+  "license": "UNLICENSED",
+  "private": true,
+  "scripts": {
+    "test": "node --test scripts/alarms.test.cjs scripts/legacy-samples.test.cjs scripts/windows-integration.test.cjs",
+    "qa": "node scripts/qa-functional.cjs",
+    "qa:alarms": "node scripts/qa-alarms.cjs",
+    "qa:migration": "node scripts/qa-migration.cjs",
+    "qa:calendar": "node scripts/qa-calendar.cjs",
+    "qa:content": "node scripts/qa-content.cjs",
+    "update:installed": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/update-installed.ps1",
+    "start": "electron .",
+    "icon": "node scripts/generate-icon.cjs",
+    "pack": "npm run icon && electron-builder --dir --win --x64",
+    "build": "npm run icon && electron-builder --win nsis --x64"
+  },
+  "devDependencies": {
+    "electron": "44.9.0",
+    "electron-builder": "26.15.3"
+  },
+  "build": {
+    "appId": "local.notes.desktop",
+    "productName": "Notes",
+    "asar": true,
+    "files": [
+      "electron/**/*",
+      "src/**/*",
+      "build/icon.ico",
+      "build/icon.png",
+      "package.json"
+    ],
+    "directories": {
+      "output": "release"
+    },
+    "win": {
+      "icon": "build/icon.ico",
+      "target": [
+        {
+          "target": "nsis",
+          "arch": ["x64"]
+        }
+      ],
+      "artifactName": "Notes-Setup-${version}.${ext}"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "Notes",
+      "uninstallDisplayName": "Notes",
+      "deleteAppDataOnUninstall": false,
+      "runAfterFinish": true
+    }
+  }
+}

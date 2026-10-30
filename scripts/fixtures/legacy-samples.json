@@ -1,0 +1,96 @@
+{
+  "version": 1,
+  "notes": [
+    {
+      "title": "2027 kişisel yön haritası",
+      "kind": "PLAN",
+      "time": "09:42",
+      "folder": null,
+      "excerpt": "İş, sağlık, öğrenme ve yaşam alanları için uzun vadeli yönler.",
+      "body": [
+        "Yeni yıl için hedef listesi değil, karar verirken geri dönülecek bir yön haritası oluşturmak istiyorum.",
+        "Öncelik; daha fazla proje başlatmak yerine az sayıdaki önemli işi sakin, görünür ve sürdürülebilir biçimde ilerletmek."
+      ]
+    },
+    {
+      "title": "Okuma notları · Davranış Tasarımı",
+      "kind": "OKUMA NOTU",
+      "time": "Dün",
+      "folder": null,
+      "excerpt": "Davranışı tetikleyen çevresel işaretler ve sürdürülebilir sistemler.",
+      "body": [
+        "Davranış değişikliği iradeden önce çevrenin nasıl düzenlendiğiyle başlıyor.",
+        "İyi tasarlanmış bir sistem doğru davranışı görünür, kolay ve tekrarlanabilir hâle getirir."
+      ]
+    },
+    {
+      "title": "Ekim bütçe gözden geçirme",
+      "kind": "LİSTE",
+      "time": "14 Eki",
+      "folder": null,
+      "excerpt": "Sabit giderler, değişken bütçe ve gelecek ay için düzenlemeler.",
+      "body": [
+        "Sabit giderleri tekrar sınıflandır. Kullanılmayan abonelikleri kapat ve Kasım için tek bir harcama sınırı belirle."
+      ]
+    },
+    {
+      "title": "Notes ürün notları",
+      "kind": "PROJE",
+      "time": "12 Eki",
+      "folder": null,
+      "excerpt": "Bilgi mimarisi, etkileşim ve masaüstü deneyimi kararları.",
+      "body": [
+        "Arayüzün temel ilkesi sessiz lüks: güçlü hiyerarşi, ölçülü kırmızı ve gereksiz panellerden arındırılmış çalışma yüzeyi.",
+        "Not, görev, tarih ve şema aynı kaydın farklı görünümleri olarak çalışmalı."
+      ]
+    },
+    {
+      "title": "Sessiz arayüzler",
+      "kind": "FİKİR",
+      "time": "8 Eki",
+      "folder": null,
+      "excerpt": "Bildirim yerine bağlam; renk yerine hiyerarşi.",
+      "body": [
+        "Bir arayüz kullanıcının dikkatini istememeli; doğru anda doğru bilgiyi sakin biçimde göstermeli."
+      ]
+    },
+    {
+      "title": "Kişisel ilkeler",
+      "kind": "NOT",
+      "time": "5 Eki",
+      "folder": "Kişisel",
+      "excerpt": "Karar verirken geri dönülecek kısa ilkeler.",
+      "body": [
+        "Netlik hızdan, tutarlılık yoğunluktan, bitirmek başlamaktan daha değerlidir."
+      ]
+    }
+  ],
+  "folders": [
+    "Kişisel",
+    "Projeler",
+    "Okuma",
+    "Referans"
+  ],
+  "tasks": [
+    {
+      "title": "Ürün şemasını sadeleştir",
+      "time": "10:30",
+      "done": false
+    },
+    {
+      "title": "Haftalık not taslağı",
+      "time": "14:00",
+      "done": false
+    },
+    {
+      "title": "Okuma listesini işle",
+      "time": "17:30",
+      "done": false
+    },
+    {
+      "title": "Renk kararlarını arşivle",
+      "time": "Tamamlandı",
+      "done": true
+    }
+  ]
+}
